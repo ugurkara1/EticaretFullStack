@@ -1,0 +1,1245 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #2d3a4b;
+}
+
+body{
+    margin:0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+.font-montserrat{
+    font-family: "Montserrat", sans-serif;
+}
+.font-playfair{
+    font-family: "Playfair", serif;
+}
+.text-orange{
+    color: #f38509;
+}
+.text-yellow{
+    color: #ffe115;
+}
+.bg-orange{
+    background-color: #f38509;
+}
+.bg-yellow{
+    background-color: #ffe115;
+}
+
+.fw-bold-600{
+    font-weight: 600;
+}
+/**Top Bar ve Login*/
+
+/* CSS düzenlemeleri */
+.top-bar{
+    height: 50px;
+}
+
+.top-bar .login li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.top-bar .login li a{
+    line-height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.user-basket .item-count{
+    position:absolute;
+    top: 1px;
+    right: 22px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 11px;
+    line-height: 20px;
+}
+.top-bar .user-basket .dropdown-menu{
+    padding: 20px;
+    border: 0;
+    border-radius: 0;
+    min-width: 300px;
+    top: 8px !important;
+    right: 0 !important;
+    left: auto !important;
+    box-shadow: -1px 2px 20px rgba(0,0,0,0.3);
+}
+.top-bar .basket-buttons a{
+    border-radius: 0 !important;
+}
+
+/* sepetteki scrolbar*/
+.overflow-custom{
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+
+/* HEADER -NAVBAR */
+header{
+    height: 130px;
+    padding: 30px;
+}
+
+.logo{
+    max-height: 70px;
+}
+header nav li.nav-item{
+    margin: 0 5px;
+    padding: 15px 0;
+
+}
+
+header nav li a.nav-link{
+    font-size: 14px !important;
+    font-weight: normal;
+    /* color:#2d3a4b ; */
+    text-transform: uppercase;
+    margin: 0 10px;
+    letter-spacing: 3px;
+    position: relative;
+    transition: all .3s linear;
+
+}
+
+header nav li a.nav-link::before{
+    width: 0;
+    margin: 0 auto;
+    position: absolute;
+    content: "";
+    height: 5px;
+    left: 0;
+    top: 45%;
+    z-index:-1 ;
+    background-color: #ffe115;
+    transition: 0.3s ease-in-out;
+
+}
+header nav li a.nav-link:hover::before{
+    width: 100%;
+}
+header nav li.active a.nav-link::before{
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    content: "";
+    height: 5px;
+    left: 0;
+    top: 45%;
+    z-index:-1 ;
+    background-color: #ffe115;
+    transition: 0.3s ease-in-out;
+
+}
+
+.nav-right{
+    margin-left: 20px;
+    margin-top: -5px;
+}
+.nav-right i{
+    font-size: 20px;
+}
+
+.zoom:before{
+    transition: transform is ease;
+}
+.zoom:hover::before{
+    transform: scale(1.5);
+}
+/* Menu Dropdown */
+.navbar-nav .dropdown .dropdown-menu {
+    width: 70%;
+    left: 15%;
+    padding: 30px;
+    top: 105px;
+    height: 450px;
+}
+
+.navbar-nav .dropdown {
+    position: unset;
+}
+
+.dropdown-menu a.dropdown-link {
+    display: block;
+    font-size: 14px;
+    padding: 6px 0;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a.dropdown-link:hover {
+    font-size: 14px;
+    color: orange !important;
+}
+
+.navbar-column {
+    border-right: 1px solid rgba(0,0,0,0.16);
+    padding: 0 15px;
+}
+
+.navbar-column:last-child {
+    border-right: none;
+}
+
+.nav.brands .row {
+    width: 100%;
+    margin: 0;
+
+}
+
+.nav.brands .col {
+    padding: 0 15px;
+}
+.nav-brand-swiper img{
+    max-height: 300px;
+}
+
+.dropdown-menu h4 {
+  padding-left: 1rem;    /* px-3 ile eşdeğer */
+  padding-right: 1rem;   /* Sol-sağ boşluk eşit */
+  margin-bottom: 1.5rem; /* mb-4 (Bootstrap'te 1.5rem) */
+}
+
+/* Search */
+.search-inside{
+    display: none;
+    position: fixed;
+    left:0;
+    right: 0;
+    top:0;
+    bottom:0;
+    opacity: 0.8;
+    z-index: 500;
+}
+.search-inside .position-center-center{
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    padding: 0 20px;
+}
+.search-inside {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* ... */
+}
+
+.basket-detail {
+    position: sticky;
+    top: 0;
+    /* ... */
+}
+
+.search-inside .search{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.search-inside .search input{
+    background-color: #fff;
+    font-size: 20px;
+    color: #333;
+    text-align: left;
+    height: 60px;
+    width: 100%;
+    border: none;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.50);
+}
+
+.search-inside .search input:focus{
+    outline: none;
+    border-bottom: 1px solid rgba(0,0,0,0.50);
+}
+
+.search-inside .search button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+    margin-top: 0;
+    background: none;
+    line-height: 60px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: none;
+}
+.search-inside .search-close{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+.slider {
+/*     height: calc(100vh - 240px);
+*/
+    width: 100%;
+    height: 500px;
+}
+.slider,
+.swiper-container,.brands-swiper,
+.season-product-swiper{
+    overflow-x: hidden;
+}
+
+.slider .slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+}
+
+.slider .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*ortada*/
+}
+
+.home-swiper .swiper-button-prev,
+.home-swiper .swiper-button-next{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    transition: background-color .6s ease;
+
+}
+.home-swiper .swiper-button-prev:hover,
+.home-swiper .swiper-button-next:hover{
+
+    background-color: #fff;
+    color: #000;
+    transition: background-color .3s ease;
+
+}
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* İsteğe bağlı, açılış konumunu ayarlamak için */
+}
+
+
+
+.slider-title{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+.slider-title h3{
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.slider-title h2{
+    font-size: 75px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+
+}
+
+.slider-title a{
+    border-radius: 0;
+    font-size: 20px;
+    padding: 10px 30px ;
+}
+.title-wrapper{
+    display: flex; /* Swepper wrapper ı flex yapısı kullan */
+    flex-direction: column; /* Öğeleri dikey hizala */
+    justify-content: center; /* İçeriği yatay hizala */
+    align-items: center; /* İçeriği dikeyde hizala */
+}
+
+/* Feature BrandSlider */
+
+.feature-brands h3{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Ters Renk */
+
+.feature-brands .brands-swiper{
+    height: 100px;
+    line-height: 100px;
+}
+
+.feature-brands .brands-slider {
+    transition: filter 0.3s, background-color 0.3s; /* Normal duruma geçis efekti */
+    background-color: #fff;
+}
+
+.feature-brands .brands-slider:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+    transition: filter 0.3s, background-color 0.3s; /* Üzerine gelindiğinde geçiş efekti */
+}
+
+.feature-brands .brands-slider:hover  img{
+    filter: brightness(0) invert(1);
+} /* Resmi beyaz yapmak için  */ /* Parlaklığı azaltmak için 0 verdik.invertte rengi tersine çevirmek için */
+
+.feature-brands .swiper-button-next,
+.feature-brands .swiper-button-prev,
+.feature-season-products .swiper-button-next,
+.feature-season-products .swiper-button-prev
+
+{
+    top: 14px;
+    bottom: auto;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.feature-brands .swiper-button-prev:after,
+.feature-brands .swiper-button-next:after,
+.feature-season-products .swiper-button-next:after,
+.feature-season-products .swiper-button-prev:after{
+    font-size: 15px;
+    color: #2d3a4b;
+}
+
+.feature-brands .swiper-button-prev:hover,
+.feature-brands .swiper-button-next:hover,
+.feature-season-products .swiper-button-next:hover,
+.feature-season-products .swiper-button-prev:hover{
+    border-radius: 40px;
+    border: 1px solid #2d3a4b;
+
+}
+.feature-brands .swiper-button-next,
+.feature-season-products .swiper-button-next{
+    right: 20px;
+    left: auto;
+}
+.feature-brands .swiper-button-prev,
+.feature-season-products .swiper-button-prev{
+    right: 40px;
+    left: auto;
+}
+
+/* Home Banner */
+
+.feature-product-banner .banner{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    object-fit: cover;
+}
+
+/* Featura Season Products */
+
+.feature-season-products{
+    background-color: rgb(245 151 60 / 21%);
+}
+.wrapper-product .prodcut-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.wrapper-product .product-tag{
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+}
+
+.wrapper-product .favorite,
+.wrapper-product .unfavorite{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.wrapper-product .product-brand{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+    padding-bottom: 1px;
+    text-decoration: none;
+    background-color: rgb(245 151 60 / 21%);
+
+}
+
+.wrapper-product .product-info .product-title{
+    font-size: 19px;
+    margin-bottom: 0;
+
+}
+
+.wrapper-product .product-info .product-description{
+    font-size: 14px;
+}
+
+.wrapper-product .product-info .product-price{
+    font-weight: 500;
+    font-size: 14px;
+
+
+}
+
+footer{
+    background-color: #171e27;
+    padding: 90px 0;
+}
+
+footer h6{
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+}
+footer ul{
+    padding-left: 0;
+}
+footer li a{
+    font-size:16px;
+    color: #999;
+    line-height: 26px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer li a:hover{
+    color: #fff;
+}
+
+/* Main */
+
+main{
+    padding: 30px;
+}
+.sortby{
+    border:unset;
+    padding-right: 5px;
+    font-size: 14px;
+}
+
+.product-list-info .product-count{
+    font-size: 12px;
+}
+
+.product-filter{
+    max-height: calc(120vh - 240px);
+    overflow: hidden scroll;
+    position: sticky;
+    top: 0;
+}
+
+.product-filter .filter-item-wrapper{
+    position: relative;
+    border-bottom: 1px solid #ececec;
+    padding: 20px 0;
+}
+
+.product-filter .filter-title{
+    font-size:14px ;
+}
+.filter-detail{
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.filter-item input[type=checkbox]{
+    min-width: 15px;
+    min-height: 15px;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    border: solid 1.5px #d6d6d6;
+
+}
+
+.filter-item input[type=checkbox]:checked{
+    background-color: orange;
+}
+.filter-item input[type=checkbox]:focus{
+    outline: none;
+    box-shadow: none
+}
+
+.filter-item label{
+    font-size: 13px;
+}
+
+.filter-price input{
+    font-size: 11px;
+
+}
+.filter-price input::placeholder{
+    font-size: 10px;
+}
+.filter-price button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.filter-price input:focus{
+    border-color: #f38509;
+    box-shadow: none
+}
+.filter-price button:hover{
+    color: #f38509;
+}
+
+.filter-price > *{
+    padding-left: 12px;
+    padding-right: 3px;
+}
+
+/* Pagination */
+
+/* Pagination */
+.pagination li.active a, .pagination li a:hover {
+    background: #f38509;
+    color: #2d3a4b;
+    text-decoration: none;
+}
+
+.pagination li a {
+    background-color: #2d3a4b;
+    color: #fff;
+    margin: 0 4px;  /* İncreased margin for better spacing */
+    height: 35px;   /* İncreased height */
+    width: 35px;    /* Added width to make square buttons */
+    text-align: center;
+    line-height: 35px;  /* İncreased to match height */
+    font-size: 14px;    /* İncreased font size */
+    position: relative;
+    float: left;
+    display: flex;      /* Added for better centering */
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px; /* Optional: added slight rounding */
+    position: relative;
+    float: left;
+}
+
+/* Add container with right margin for product listing page */
+/* Product listing page için sağ marj ekle */
+.product-listing-container {
+    width: 90%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: 10%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Ana içerik alanını sağ marj ile ayarla */
+main {
+    padding: 30px;
+    padding-right: 10%;
+}
+
+
+
+/* Make product grid responsive with right margin */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-right: 5%;
+}
+
+/* Ensure the header navigation respects the right margin */
+header {
+    width: 90%;
+    margin-right: 10%;
+    margin-left: auto;
+}
+
+/* Adjust footer to match the right margin */
+footer {
+    padding: 90px 10% 90px 0;
+    width: 100%;
+    margin-left: auto;
+}
+
+/* Make sure slider respects the margin */
+.slider {
+    width: 100%;
+    margin-right: 10%;
+    margin-left: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .product-listing-container,
+    main,
+    header,
+    footer,
+    .slider {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-listing-container,
+    main,
+    header,
+    footer,
+    .slider {
+        width: 100%;
+        margin-right: 0;
+        padding-right: 15px;
+    }
+
+    .product-grid {
+        margin-right: 0;
+    }
+}
+
+
+/* Product Detail Page */
+.product-image-wrapper .swiper-button-prev,
+.product-image-wrapper .swiper-button-next {
+    right: 0;
+}
+
+.product-image-wrapper .swiper-button-prev:after,
+.product-image-wrapper .swiper-button-next:after {
+    font-size: 25px;
+    color: #f38509;
+}
+
+.big-slider {
+    position: relative;
+    overflow-y: hidden;
+    padding: 0 50px;
+}
+
+.thumb-sliders {
+    min-height: 200px;
+    position: relative; /* Slider içindeki butonların doğru konumlandırılması için */
+    margin-top: 15px; /* Ana ve thumb slider arasında boşluk */
+}
+
+.thumb-sliders-buttons {
+    font-size: 25px;
+    position: absolute;
+    top: 60%; /* Butonları dikey olarak ortala */
+    transform: translateY(-50%);
+    transform: translateX(50%);
+    width: 50%;
+    display: flex;
+    justify-content: space-between; /* Sol ve sağ butonları yanlara yerleştir */
+    padding: 0 10px;
+    z-index: 10; /* Butonların slider üzerinde görünmesi için */
+}
+
+.thumb-prev, .thumb-next {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.thumb-sliders-buttons span:hover{
+    color: #f38509;
+}
+
+.thumb-image,
+.big-image img{
+    width: 100%;
+
+}
+.product-detail {
+    position: relative;  /* Pozisyon ayarları için gerekli */
+    letter-spacing: 1px;
+}
+
+.product-detail h4 {
+    letter-spacing: 1px;
+}
+
+.product-detail hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.price {
+    letter-spacing: 1px;
+}
+
+.discount-rate {
+    position: absolute;
+    top: 0;
+    right: 0;  /* Sağdan (right) sola (left) değiştirildi */
+    background-color: #f38509;
+    height: 65px;
+    width: 65px;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    line-height: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.discount-rate span {
+    font-size: 12px;
+    line-height: 20px;
+}
+.btn.bg-orange {
+    background-color: #f38509;
+    border-color:   #f38509;
+    color:          #fff;
+}
+
+.btn.bg-orange:hover {
+    background-color: #e06e00;
+    border-color:   #e06e00;
+}
+
+
+.product-detail .product-short-description {
+    line-height: 25px;
+    letter-spacing: 0.05em;
+}
+
+/* favoriye alma */
+.shopping .bi-heart{
+    font-size: 20px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.piece-wrapper .input-group{
+    border: 1px solid #f38509;
+    border-radius: 5px;
+
+}
+
+.piece-wrapper .input-group span{
+    height: 50px;
+    width: 33%;
+    text-align: center;
+    position: relative;
+    line-height: 50px;
+    font-size: 20px;
+    color: #f38509;
+    cursor: pointer;
+}
+
+
+.piece-wrapper input{
+    background-color: #fff;
+    max-width: 33%;
+    text-align: center;
+    color: #787878;
+    border: none;
+}
+
+.piece-wrapper .input-group span.piece-increase::before{
+    left: 0;
+    right: auto;
+}
+
+.piece-wrapper .input-group span.piece-decrease::before,
+.piece-wrapper .input-group span.piece-increase::before{
+    position: absolute;
+    width: 1px ;
+    height: 22px;
+    background-color: #f38509;
+    top: 50%;
+    right: 0;
+    content: "";
+    margin-top: -11px;
+}
+
+.shopping select{
+    height: 50px;
+    border:1px solid #f38509;
+}
+
+.shopping select:focus{
+    border-color: #f38509;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(286, 107, 0, 0.44);
+}
+
+.add-to-card{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    padding: 0;
+}
+
+.add-to-cart:hover{
+    background-color: #e06e00;
+    border-color: #e06e00;
+}
+
+
+/* Accordion özelleştirmeleri */
+.accordion-item {
+    border-color: #f38509;
+}
+
+/* Collapsed olmayan durum (açık) */
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #f38509;
+    box-shadow: inset 0 -1px 0 rgba(243, 133, 9, 0.5);
+}
+
+/* Focus durumu */
+.accordion-button:focus {
+    border-color: #f38509;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(243, 133, 9, 0.4);
+}
+
+/* Hover durumu */
+.accordion-button:hover {
+    background-color: #f38509 !important;
+    color: #fff !important;
+}
+/* Bootstrap'in varsayılan stillerini ezmek için !important kullanımı */
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(243, 133, 9, 0.4) !important;
+    border-color: #f38509;
+
+}
+
+/* Active durumu */
+.accordion-button:active {
+    background-color: rgba(250, 133, 0, 0.2);
+}
+
+
+/* After pseudo-element (ok işareti) */
+.accordion-button::after {
+    color: #f38509;
+
+}
+
+/* Açık durumdaki ok işareti */
+/* Sadece açılmış accordion butonu hover’ı */
+.accordion-button:not(.collapsed):hover {
+    background-color: #f38509 !important;
+    color: #fff !important;
+
+}
+.accordion-button:not(.collapsed):hover::after {
+    color: #fff !important;
+}
+
+
+/* Accordion başlığı */
+.accordion-header {
+    margin-bottom: 0;
+}
+
+/* Accordion body stilini özelleştirme */
+.accordion-body {
+    padding: 1rem;
+    border-top: 1px solid rgba(243, 133, 9, 0.2);
+}
+
+/* Card sayfası */
+
+.card-page table img{
+    width: 100px;
+
+}
+
+.card-page table th,
+.my-orders table th{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.card-page table div{
+    font-size: 14px;
+}
+.card-page table td,
+.my-orders table td{
+    vertical-align: middle;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.my-orders table tbody,
+.my-orders table td,
+.my-orders table tfoot,
+.my-orders table th,
+.my-orders table thead,
+.my-orders table tr{
+    border-color: #f38509;
+}
+
+
+.card-page table .piece-wrapper .input-group{
+    width: 150px;
+}
+
+
+.card-page table .piece-wrapper .input-group span{
+    height: unset;
+    line-height: unset;
+}
+
+/* Card Basket detail */
+
+.btn-approve-basket{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    padding: 0
+}
+
+.btn-approve-basket:hover{
+    background-color: #673c0b;
+
+}
+
+.basket-detail{
+    padding: 20px 0;
+    border-bottom: 1px solid #ececec;
+    position: sticky;
+    top: 0;
+    background-color: #f7f7f7;
+    height: 100%;
+}
+
+.grand-total{
+    border: 1px solid #f38509;
+    padding: 30px;
+
+}
+
+.grand-total p{
+    font-size: 14px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.grand-total p:last-child{
+    border-bottom: unset;
+    font-size: 14px;
+}
+.grand-total i{
+    cursor: pointer;
+
+}
+.grand-total i:hover{
+    color: #f38509;
+}
+
+.discount-wrapper{
+    border: 1px solid #ebebeb;
+    padding: 20px 10px;
+    border-radius: 5px;
+
+}
+.discount-wrapper h5{
+    font-size: 12px;
+}
+
+.discount-wrapper input{
+    font-size: 12px;
+    height: 40px;
+
+}
+
+.discount-wrapper input:focus{
+    border-color: #f38509;
+    box-shadow: unset;
+}
+.discount-wrapper button{
+    height: 40px;
+    font-size: 12px;
+
+}
+
+/* Order detail wrapper Checkout Sayfası */
+
+.order-detail-wrapper h6{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.order-detail-wrapper h6::before{
+    width: 90px;
+    height: 2px;
+    background-color: #2d3a4b;
+    border: none;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    margin-top: 30px;
+
+}
+.order-detail-wrapper label{
+    width: 100%;
+    font-size: 12px;
+}
+.order-detail-wrapper input,
+.order-detail-wrapper select,
+.order-detail-wrapper textarea{
+    border: 1px solid #2d3a4b;
+    height: 44px;
+    width: 100%;
+    font-size: 11px;
+    padding: 0 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+}
+.order-detail-wrapper textarea{
+    height: inherit;
+    resize: none;
+}
+.order-detail-wrapper .nav-tabs .nav-link{
+    position: relative;
+    padding-bottom: 10px;
+    border: unset;
+    color: inherit ;
+    font-size: 12px;
+}
+
+.order-detail-wrapper .nav-tabs .nav-link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #f38509;
+    transition: width 0.3s ease;
+}
+
+.order-detail-wrapper .nav-tabs .nav-link.active::after{
+
+    width: 100%;
+
+}
+
+.order-detail-wrapper .nav-tabs .nav-link:focus,
+.order-detail-wrapper .nav-tabs .nav-link:hover
+{
+    border-color: unset;
+}
+
+/* contract */
+.contract {
+    display: flex;
+    font-size: 11px;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+}
+
+.contract label{
+    margin:5px 10px
+}
+
+.contract a{
+    font-weight:bold;
+    text-decoration:underline;
+
+}
+
+.contract input{
+    width: 20px;
+    height: 20px;
+}
+.text-wrapper h1,
+.text-wrapper h2,
+.text-wrapper h3,
+.text-wrapper h4,
+.text-wrapper h5,
+.text-wrapper h6{
+    font-size:12px;
+}
+
+.contracts-text-wrapper{
+    max-height: 150px;
+    overflow-y: scroll;
+    padding: 30px 0;
+    background-color: #fafafa;
+}
+.contract-text {
+    width: 80%;
+    font-size: 15px;
+}
+
+.btn-contracts-approve:hover{
+    color: #b76306 !important;
+}
+
+/* Order detail */
+
+.s-amount div{
+    font-size: 12px;
+}
+.my-orders table td{
+    vertical-align: middle;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.my-orders .card,
+.my-orders .card-header{
+    border-color: #f38509 !important;
+}
+.my-orders .card-header{
+    background-color: rgb(243 133 7 / 38%);
+
+}
+.my-orders table img{
+    width: 100px;
+
+}
+.my-orders .grand-total{
+    padding-bottom: 0;
+}
