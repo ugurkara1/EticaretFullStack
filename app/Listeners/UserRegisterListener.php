@@ -3,8 +3,11 @@
 namespace App\Listeners;
 
 use App\Events\UserRegisterEvent;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
+use App\Mail\UserWelcomeMail;
+use App\Notifications\WelcomeMailNotification;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class UserRegisterListener
 {
@@ -22,6 +25,10 @@ class UserRegisterListener
     public function handle(UserRegisterEvent $event): void
     {
         //
-        dd($event->user);
-    }
+/*         $token=Str::random(40);
+        //Ön bellekte 60 dakika boyunca sakla
+        Cache::put("_verify_token_" . $token, $event->user->id, 3600);
+        $event->user->notify(new WelcomeMailNotification($token)); */
+/*         Mail::to(users: $event->user->email)->send(new UserWelcomeMail($event->user, $token));
+ */   }
 }

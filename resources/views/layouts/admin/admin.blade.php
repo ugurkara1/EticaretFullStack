@@ -29,6 +29,9 @@
 	<script src="assets/assets/vendors/core/core.js"></script>
 	<script src="assets/assets/vendors/feather-icons/feather.min.js"></script>
 	<script src="assets/assets/js/template.js"></script>
+    <script>
+        feather.replace();
+    </script>
     @stack("js")
 </body>
 </html>

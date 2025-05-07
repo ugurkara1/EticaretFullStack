@@ -13,6 +13,7 @@ class AppServiceProvider extends ServiceProvider
             UserRegisterListener::class,
         ]
     ];
+
     public function register(): void
     {
         //

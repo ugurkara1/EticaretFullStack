@@ -23,8 +23,10 @@ Route::middleware('throttle:registration')->group(function () {
     Route::post('/kayit-ol', [RegisterController::class, 'register']);
 });
 
+
+Route::get('/dogrula/{token}', [RegisterController::class, 'verify'])->name('verify');
 Route::get("giris",[LoginController::class,'showForm'])->name("login")->middleware('throttle:60,1');
 Route::post("giris",[LoginController::class,'login']);
-Route::prefix("admin")->group(function(){
-    Route::get("/",[AdminController::class,"index"]);
+Route::prefix("admin")->middleware("auth")->group(function(){
+    Route::get("/", [AdminController::class, "index"])->name("admin.index");
 });

@@ -43,6 +43,8 @@
 	<script src="assets/assets/vendors/core/core.js"></script>
     <script src="assets/assets/vendors/sweetalert2/sweetalert2.min.js"></script>
 	<script src="assets/assets/js/template.js"></script>
+    @include('sweetalert::alert')
+
     @stack("js")
 </body>
 </html>
