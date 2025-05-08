@@ -32,9 +32,18 @@ class RegisterController extends Controller
             alert()->warning('Uyarı','Token geçersiz veya süresi dolmuş.');
             return redirect()->route('register');
         }
-        $user=User::findOrFail($userID);
+/*         $user=User::findOrFail($userID);
         $user->email_verified_at=now();
-        $user->save();
+        $user->save(); */
+
+        $userQuery=User::query()
+            ->where('id',$userID);
+        $user=$userQuery->firstOrFail();
+        $userUpdate=$userQuery->update([
+            'email_verified_at'=>now()
+        ]);
+
+
         Auth::login($user);
         alert()->success('Başarılı','E-posta adresiniz onaylandı.');
         return redirect()->route('admin.index');

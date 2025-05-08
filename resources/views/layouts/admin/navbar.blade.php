@@ -106,10 +106,13 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript:;" class="nav-link">
+                                <a href="javascript:;" onclick="event.preventDefault();document.getElementById('logoutForm').submit()" class="nav-link">
                                     <i data-feather="log-out"></i>
                                     <span>Log Out</span>
                                 </a>
+                                <form action="{{route('logout')}} " id="logoutForm" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </li>
                         </ul>
                     </div>

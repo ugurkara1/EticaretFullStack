@@ -8,11 +8,12 @@
     <div class="px-4 py-5 auth-form-wrapper">
         <a href="#" class="mb-2 noble-ui-logo d-block">GDG<span>ETicaret</span></a>
         <h5 class="mb-4 text-muted font-weight-normal">Hoşgeldiniz. Hesabınıza giriş yapabilirsiniz.</h5>
-        <form class="forms-sample">
+        <form class="forms-sample" id="loginForm" action="{{route('login')}}" method="POST">
+        @csrf
 
         <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+            <label for="email">Email Adresi</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="{{old('email')}}">
         </div>
         <div class="form-group">
             <label for="password">Parola</label>
@@ -26,7 +27,7 @@
             </label>
         </div>
         <div class="mt-3">
-            <a href="javascript:void(0)" class="mb-2 mr-2 text-white btn btn-primary mb-md-0">Giriş Yap</a>
+            <a href="javascript:void(0)" id="btnLogin"class="mb-2 mr-2 text-white btn btn-primary mb-md-0">Giriş Yap</a>
             <button type="button" class="mb-2 btn btn-outline-primary btn-icon-text mb-md-0">
             <i class="mdi mdi-google" ></i>
             Google ile Kayıt ol
@@ -38,5 +39,5 @@
 @endsection
 
 @push('js')
-
+    <script src="{{asset('assets/assets/js/auth/login.js')}}"></script>
 @endpush
